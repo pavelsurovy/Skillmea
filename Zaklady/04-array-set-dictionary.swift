@@ -74,3 +74,29 @@ skore.isEmpty
 
 let ovocieOpacne = ovocie.reversed()
 print(ovocieOpacne)
+
+
+
+// Set
+
+var farby = Set(["červerná", "zelená", "modrá", "fialová", "ružová", "žltá", "zelená"])
+print(farby)
+
+farby.insert("pomarančová")
+print(farby)
+
+let neparneCisla: Set = [1, 3, 5, 7, 9]
+let parneCisla: Set = [0, 2, 4, 6, 8]
+let prvocisla: Set = [2, 3, 5, 7]
+
+let setUnion = neparneCisla.union(parneCisla).sorted()
+print(setUnion)
+
+let setIntersection = neparneCisla.intersection(prvocisla).sorted()
+print(setIntersection)
+
+let setSymmetricDifference = neparneCisla.symmetricDifference(prvocisla).sorted()
+print(setSymmetricDifference)
+
+let setSubtracting = neparneCisla.subtracting(prvocisla).sorted()
+print(setSubtracting)
