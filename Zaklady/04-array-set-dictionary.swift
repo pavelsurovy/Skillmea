@@ -100,3 +100,51 @@ print(setSymmetricDifference)
 
 let setSubtracting = neparneCisla.subtracting(prvocisla).sorted()
 print(setSubtracting)
+
+
+// Dictionary
+
+var letiska = ["LHR", "London Heathrow", "Anglicko"]
+
+print("Kód letiska: \(letiska[0])")
+print("Celý názov letiska: \(letiska[1])")
+print("Krajina: \(letiska[2])")
+
+letiska.remove(at: 1)
+
+var letiska2 = [
+    "idLetiska": "LHR",
+    "menoLetiska": "London Heathrow",
+    "krajina": "Anglicko"
+]
+
+print(letiska2["idLetiska", default: "N/A"])
+print(letiska2["menoLetiska", default: "N/A"])
+print(letiska2["krajina", default: "N/A"])
+
+print(letiska2["riaditelLetiska", default: "N/A"])
+
+var prvocislo = [
+    1: false,
+    2: true,
+    3: true,
+    4: false,
+    5: true,
+    6: false,
+    7: true
+]
+
+print(prvocislo[12, default: true])
+
+
+var pocetObyvatelov = [String: Int]()
+pocetObyvatelov["BA"] = 475_503
+pocetObyvatelov["KE"] = 240_000
+pocetObyvatelov["LM"] = 31_521
+
+print(pocetObyvatelov)
+
+print(pocetObyvatelov["TT", default: 0])
+
+print(pocetObyvatelov.keys)
+print(pocetObyvatelov.values)
