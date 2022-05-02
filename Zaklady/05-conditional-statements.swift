@@ -104,3 +104,29 @@ if teplota <= 17 {
 } else {
     print("Je akurát!")
 }
+
+
+// Logical Operators
+
+/*
+
+  !a
+  a && b
+  a || b
+
+*/
+
+var a = true
+print(!a)
+
+let teplota = 23
+if teplota > 20 && teplota < 30 {
+    print("Vonku je príjemne!")
+}
+
+let vekUzivatela = 12
+let povolenieRodica = true
+
+if vekUzivatela >= 18 || povolenieRodica {
+    print("Nákup aplikácie povolený!")
+}
