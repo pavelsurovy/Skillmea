@@ -61,3 +61,23 @@ while hodnotaHodu != 6 {
 }
 print("Môžeš ísť, hodil si 6!")
 print("Potreboval si na to \(pocetHodov)")
+
+
+// repeat
+
+var hodiny = 10
+
+repeat {
+    print("Zostáva ešte \(hodiny) hodín")
+    hodiny -= 1
+} while hodiny >= 0
+
+var pocitadlo = 0
+
+while pocitadlo != 0 {
+    print("Premenná nie je 0!")
+}
+
+repeat {
+    print("Premenná je 0")
+} while pocitadlo != 0
