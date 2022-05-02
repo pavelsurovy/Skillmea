@@ -36,3 +36,28 @@ for i in 1...5 {
     }
     print()
 }
+
+
+// while
+
+var casovac = 5
+
+while casovac > 0 {
+    print("štart o \(casovac)")
+    casovac -= 1
+}
+print("štartujeme")
+
+var cislo1 = Int.random(in: 1...100)
+var cislo2 = Double.random(in: 0..<100)
+
+var hodnotaHodu = 0
+var pocetHodov = 0
+
+while hodnotaHodu != 6 {
+    hodnotaHodu = Int.random(in: 1...6)
+    pocetHodov += 1
+    print("Padlo číslo: \(hodnotaHodu)")
+}
+print("Môžeš ísť, hodil si 6!")
+print("Potreboval si na to \(pocetHodov)")
