@@ -130,3 +130,55 @@ let povolenieRodica = true
 if vekUzivatela >= 18 || povolenieRodica {
     print("Nákup aplikácie povolený!")
 }
+
+
+// Switch Statement
+
+let pocetKolies = 2
+
+switch pocetKolies {
+case 1:
+    print("Jazdím na jednokolke")
+case 2:
+    print("Sedím na bicykli")
+case 3:
+    print("Trojkolka nie je len pre deti")
+case 4:
+    print("Toto bude asi auto")
+default:
+    print("Uff... to je ale veľa kolies...")
+}
+
+let rasaPsa = "Vyžla"
+
+switch rasaPsa {
+case "Weimar", "Vyžla", "Bavorský farbiar":
+    print("Polovnícky pes")
+case "Vlčiak":
+    print("Chlpatý policajný pes")
+case "Border Colia":
+    print("Čierno-biely pastiersky pes")
+default:
+    print("Čo si ty za psa?")
+}
+
+let zariadenie = "MacBook"
+
+print("Na vianoce dostanem:")
+
+switch zariadenie {
+case "MacBook":
+    print("MacBook M2 Max 16\"")
+    fallthrough
+case "iPad":
+    print("iPad 12.9\" ProProPro")
+    fallthrough
+case "iPhone":
+    print("iPhone 14 Pro Max Ultra SuperDuper")
+    fallthrough
+case "iWatch":
+    print("iWatch 8")
+    fallthrough
+default:
+    print("chcem všetko!")
+}
