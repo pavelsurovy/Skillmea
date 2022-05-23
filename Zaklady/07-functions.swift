@@ -56,7 +56,7 @@ func priemernaTeplota(rannaTeplota: Double, obednaTeplota: Double, vecernaTeplot
 }
 
 let dennaTeplota = priemernaTeplota(rannaTeplota: 1.7, obednaTeplota: 7.3, vecernaTeplota: -3.6)
-print("Dňa 3. 1. 2022 bola priemerná teplota: \(dennaTeplota")
+print("Dňa 3. 1. 2022 bola priemerná teplota: \(dennaTeplota)")
 
 func priemerTestov(ziak: String, hodnotenie: [Int]) -> String {
     var vysledok = "\(ziak) má z testov priemer: "
