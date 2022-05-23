@@ -83,3 +83,27 @@ func spocitaj(retazec: String) -> Int {
 
 
 print(spocitaj(retazec: juraj))
+
+
+// Second Argument Label, Default Parameter Value, Omitting Argument Labels
+
+func pozdrav(uzivatela meno: String) {
+    print("Ahoj \(meno)")
+}
+
+pozdrav(uzivatela: "Peter")
+
+func malaNasobilka(pre cislo: Int, do maxima: Int = 10) {
+    for i in 1...maxima {
+        print("\(i) x \(cislo) = \(i * cislo)")
+    }
+}
+
+//malaNasobilka(pre: 7, do: 10)
+malaNasobilka(pre: 9, do: 3)
+
+func ahoj(_ meno: String) {
+    print("Ahoj \(meno), máš pekné meno!")
+}
+
+ahoj("Sofia")
