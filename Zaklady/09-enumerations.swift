@@ -56,3 +56,13 @@ enum Obrazky {
 
 Obrazky.imac
 Obrazky.ipad
+
+
+// Iterating over Enum
+
+let moznostiPocasia = Pocasie.allCases.count
+print("Naše počasie má \(moznostiPocasia) možných prípadov.")
+
+for pocasie in Pocasie.allCases {
+    print(pocasie)
+}
