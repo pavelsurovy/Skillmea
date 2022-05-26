@@ -25,3 +25,21 @@ aktualnePocasie = Pocasie.dadz
 aktualnePocasie = .jasno
 
 var pocasieVon: Pocasie = .oblacno
+
+
+// Enum & Switch Statement
+
+switch aktualnePocasie {
+case .jasno:
+    print("Vonku je bez mráčku")
+case .polooblacno:
+    print("Kde tu obláčik")
+case .oblacno:
+    print("Kde si ☀️")
+//case .zamracene:
+//    print("Tma cez deň")
+//case .dadz:
+//    print("Dáždnik to je dobrý vynález")
+default:
+    print("Bude dobrá sánkovačka, bude dobrá guľovačka")
+}
