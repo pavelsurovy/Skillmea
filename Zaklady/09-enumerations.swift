@@ -66,3 +66,53 @@ print("Naše počasie má \(moznostiPocasia) možných prípadov.")
 for pocasie in Pocasie.allCases {
     print(pocasie)
 }
+
+
+// Enum RawValue
+
+enum Mena: Int {
+    case eur
+    case chf
+    case huf
+    case czk
+}
+
+print(Mena.czk.rawValue)
+
+let svajciarskyFrank = Mena(rawValue: 1)
+print(svajciarskyFrank!)
+
+// Associated Values
+
+enum Ingrediencie {
+    case muka(gramov: Int)
+    case mlieko(obsah: String)
+    case cokolada
+}
+
+func pridajDoReceptu(_ ingrediencia: Ingrediencie) {
+
+    switch ingrediencia {
+
+    case .muka, .mlieko:
+        print("To som ale zvedavý čo z toho bude!")
+
+    case .muka(let gramov) where gramov == 500:
+        print("Dávaš správnu gramáž")
+
+    case .mlieko(let obsah) where obsah == "plnotučné":
+        print("Toto je to správne mlieko")
+
+    case .cokolada:
+        print("Daj kľudne ešte viac")
+    }
+}
+
+pridajDoReceptu(.muka(gramov: 500))
+pridajDoReceptu(.mlieko(obsah: "plnotučné"))
+
+//let mena = ["Jozef", "Juraj", "Tomáš", "Valentín", "Filip", "Ján"]
+//
+//for meno in mena where meno.count == 5 {
+//    print(meno)
+//}
