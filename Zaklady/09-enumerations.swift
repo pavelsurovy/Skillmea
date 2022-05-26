@@ -43,3 +43,16 @@ case .oblacno:
 default:
     print("Bude dobrá sánkovačka, bude dobrá guľovačka")
 }
+
+
+// Enum as a constant
+import SwiftUI
+
+enum Obrazky {
+    static let imac = Image(systemName: "desktopcomputer")
+    static let ipad = Image(systemName: "apps.ipad")
+    static let airtag = Image(systemName: "airtag.radiowaves.forward")
+}
+
+Obrazky.imac
+Obrazky.ipad
