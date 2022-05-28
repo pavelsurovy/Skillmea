@@ -22,23 +22,29 @@ nitra.popisPocasia()
 
 struct Drevo {
     let meno: String
-    let pocetPolien: Int = 200
+    var zaciatocnyPocetPolien: Int = 200
+    var pouzitychPolien: Int = 0
 
-    mutating func priloz(prilozenychPolien: Int) {
-        if pocetPolien > prilozenychPolien {
-            pocetPolien -= prilozenychPolien
-            print("Prikladám do pece!")
-            print("V kope ostalo \(pocetPolien) polien")
-        } else {
-            print("Nedostatok polien, choď narúbať!")
+    var zostaloPolien: Int {
+        get {
+            zaciatocnyPocetPolien - pouzitychPolien
+        }
+
+        set {
+            zaciatocnyPocetPolien = newValue
         }
     }
 }
 
-//let jurajoveDrevo = Drevo(pocetPolien: 150)
-//jurajoveDrevo.priloz(prilozenychPolien: 20)
+var alfonz = Drevo(meno: "Alfonz", zaciatocnyPocetPolien: 370)
+alfonz.pouzitychPolien += 12
+print(alfonz.zostaloPolien)
 
-var tibor = Drevo(meno: "Tibor")
-tibor.pocetPolien
+alfonz.pouzitychPolien += 17
+print(alfonz.zostaloPolien)
 
-var oliver = Drevo(meno: "Oliver", pocetPolien: 300)
+alfonz.pouzitychPolien += 7
+print(alfonz.zostaloPolien)
+
+alfonz.zostaloPolien = 50
+alfonz.zaciatocnyPocetPolien
