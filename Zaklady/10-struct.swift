@@ -48,3 +48,26 @@ print(alfonz.zostaloPolien)
 
 alfonz.zostaloPolien = 50
 alfonz.zaciatocnyPocetPolien
+
+
+// Property Observer
+
+struct Ohnisko {
+    var drevo = 0 {
+        willSet {
+            print("Počet dreva v ohnisku bol \(drevo) ks")
+            print("Drevo meníme na \(newValue)")
+        }
+        
+        didSet {
+            print("Do ohniska sme už dali \(drevo) ks dreva")
+            print("Predošlí stav dreva bol \(oldValue)")
+            print()
+        }
+    }
+}
+
+var ohnisko = Ohnisko()
+ohnisko.drevo += 5
+ohnisko.drevo += 3
+ohnisko.drevo += 1
