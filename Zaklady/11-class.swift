@@ -39,3 +39,52 @@ fabia.vyrobca
 
 let twizy = Auto(vyrobca: "Renault", model: "Twizy", rokUvedenia: 2012)
 twizy.popisAuta()
+
+
+// Class - Inheritance
+
+class Zviera {
+    let meno: String
+    let pocetNoh: Int
+
+    init(meno: String, pocetNoh: Int) {
+        self.meno = meno
+        self.pocetNoh = pocetNoh
+    }
+
+    func oblubene() {
+        print("\(meno) je moje obľúbené domáce zviera!")
+    }
+}
+
+final class Pes: Zviera {
+    func vypis() {
+        print("Pes \(meno) je domáce zviera so \(pocetNoh) nohami.")
+    }
+}
+
+class Weimar: Pes {
+
+}
+
+let aikim = Pes(meno: "Aikim", pocetNoh: 4)
+aikim.vypis()
+
+class Sliepka: Zviera {
+    var pocetVajecZaTyzden: Int?
+
+    func tyzdennyPrehlad() {
+        print("Sliepka \(meno) zniesla tento týždeň \(pocetVajecZaTyzden!) vajec.")
+    }
+
+    func oblubene(meno: String) {
+        print("Sliepka \(meno) je \(pocetNoh)-nohé domáce zviera!")
+    }
+}
+
+let kvotilda = Sliepka(meno: "Kvotilda", pocetNoh: 2)
+kvotilda.pocetVajecZaTyzden = 5
+kvotilda.tyzdennyPrehlad()
+
+aikim.oblubene()
+kvotilda.oblubene(meno: "Kvotilda")
