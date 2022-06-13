@@ -88,3 +88,23 @@ kvotilda.tyzdennyPrehlad()
 
 aikim.oblubene()
 kvotilda.oblubene(meno: "Kvotilda")
+
+
+// Class - Value vs Reference type
+
+struct Gitara {
+    var vyrobca: String
+    var pocetStrun: Int
+
+    init(vyrobca: String, pocetStrun: Int) {
+        self.vyrobca = vyrobca
+        self.pocetStrun = pocetStrun
+    }
+}
+
+let akustickaGitara = Gitara(vyrobca: "Fender", pocetStrun: 6)
+var basovaGitara = akustickaGitara
+basovaGitara.pocetStrun = 4
+
+print(akustickaGitara.pocetStrun)
+print(basovaGitara.pocetStrun)
