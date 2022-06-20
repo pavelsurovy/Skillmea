@@ -110,7 +110,6 @@ print(akustickaGitara.pocetStrun)
 print(basovaGitara.pocetStrun)
 
 
-
 // Constant as a var
 
 class DomaceZviera {
@@ -121,3 +120,33 @@ let zviera = DomaceZviera()
 zviera.druh = "Krokodíl"
 zviera = DomaceZviera()
 print(zviera.druh)
+
+
+// Deinit
+
+class Zamestnanec {
+    let id: Int
+
+    init(id: Int) {
+        self.id = id
+        print("Zamestnanec \(id): prišiel do práce")
+    }
+
+    deinit {
+        print("Zamestnanec \(id): dnes v práci skončil")
+    }
+}
+
+var zamestnanci = [Zamestnanec]()
+
+for i in 1...4 {
+    let zamestnanec = Zamestnanec(id: i)
+    print("Zamestnanec \(zamestnanec.id): pracuje ako ďas!")
+    zamestnanci.append(zamestnanec)
+}
+
+var pracovnaSila = zamestnanci
+
+print("Koniec otváracích hodín")
+zamestnanci.removeAll()
+print("Celá budova je prádzna!")
