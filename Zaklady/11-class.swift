@@ -108,3 +108,16 @@ basovaGitara.pocetStrun = 4
 
 print(akustickaGitara.pocetStrun)
 print(basovaGitara.pocetStrun)
+
+
+
+// Constant as a var
+
+class DomaceZviera {
+    let druh = "Mačka"
+}
+
+let zviera = DomaceZviera()
+zviera.druh = "Krokodíl"
+zviera = DomaceZviera()
+print(zviera.druh)
