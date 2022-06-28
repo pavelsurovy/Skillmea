@@ -46,3 +46,14 @@ func dvojnasobok(pre mojeCislo: Int?) {
 }
 
 dvojnasobok(pre: cislo)
+
+
+// FORCE UNWRAP
+
+let forceUnwrap = cislo!
+print(forceUnwrap)
+
+import Foundation
+
+let url = "https://skillmea.sk"
+let urlString = URL(string: url)!
