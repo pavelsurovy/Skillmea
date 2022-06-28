@@ -57,3 +57,24 @@ import Foundation
 
 let url = "https://skillmea.sk"
 let urlString = URL(string: url)!
+
+
+// Optional Chaining
+
+func narodeniny(rok: Int) -> String? {
+    switch rok {
+    case 2012:
+        return "Tara"
+    case 2014:
+        return "Delli"
+    case 2018:
+        return "Aikim"
+    default:
+        return nil
+    }
+}
+
+let kto = narodeniny(rok: 2014)?.uppercased()
+print("Pes sa volá \(kto)")
+
+let mojaHodnota = hodnota?.nejakaFunkcia()?.dalsiaFunkcia()?.uplneInaFunckia()
