@@ -35,3 +35,14 @@ print(cislo)
 if let cislo = cislo {
     print("zase číslo: \(cislo)")
 }
+
+
+// GUARD LET
+
+func dvojnasobok(pre mojeCislo: Int?) {
+    guard let mojeCislo = mojeCislo else { return }
+
+    print("Dvojnásobok čísla \(mojeCislo) je \(mojeCislo * 2)")
+}
+
+dvojnasobok(pre: cislo)
