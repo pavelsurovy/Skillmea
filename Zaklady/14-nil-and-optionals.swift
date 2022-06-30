@@ -59,7 +59,7 @@ let url = "https://skillmea.sk"
 let urlString = URL(string: url)!
 
 
-// Optional Chaining
+// OPTIONAL CHAINING
 
 func narodeniny(rok: Int) -> String? {
     switch rok {
@@ -78,3 +78,9 @@ let kto = narodeniny(rok: 2014)?.uppercased()
 print("Pes sa volá \(kto)")
 
 let mojaHodnota = hodnota?.nejakaFunkcia()?.dalsiaFunkcia()?.uplneInaFunckia()
+
+
+// NIL COALESING
+
+let kto2 = narodeniny(rok: 2020) ?? "N/A"
+print("Pes sa volá \(kto2)")
