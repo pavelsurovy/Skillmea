@@ -13,7 +13,7 @@ class Lietadlo: LietadlaProtocol {
     var pocetCestujucich: Int
     var kapacitaLietadla = 180
     var obsadenostLietadla: Double {
-        return Double((pocetCestujucich / kapacitaLietadla) * 100)
+        return (Double(pocetCestujucich) / Double(kapacitaLietadla)) * 100
     }
 
     func startLietadla() {
