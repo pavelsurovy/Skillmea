@@ -1,4 +1,4 @@
-// Comparsion Operators
+// Comparison Operators
 
 // ==
 
