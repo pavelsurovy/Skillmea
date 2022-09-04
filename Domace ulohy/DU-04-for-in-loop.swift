@@ -34,14 +34,14 @@ for _ in 1...6 {
 }
 
 
-// vypíšte prvých 20 čísel z fibonacciho postupnosti
+// vypíšte prvých 15 čísel z fibonacciho postupnosti
 
 var prveCislo = 0
 var druheCislo = 1
 
 var fibonacci = [prveCislo, druheCislo]
 
-for _ in 0...15 {
+for _ in 0...12 {
 
     let dalsieCislo = prveCislo + druheCislo
     prveCislo = druheCislo
