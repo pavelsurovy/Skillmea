@@ -27,6 +27,7 @@ let s = a * a * a
 
 // Chopok je na slovensku najveternejšie miesto. Priemerná ročná rýchlosť vetra je 10 m/s.
 // Aká je priemerná rýchlosť vetra v jednotkách km/h a ktas?
+// Programovanie je kažodenné riešenie problémov. Aké koľko ktas je 1km/h? Hľadajte, googlite, študujte :)
 
 let vietorMS = 10.0
 let koeficientKMH = 3.6
