@@ -6,32 +6,51 @@
 // [x, x, x, x, x] [y, y]
 // [x, x, x, x, x] [y, y]
 
-let patdesiat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
-let desat = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Riešení je ako vždy viacero, ja som si pre ukážku pripravil toto:
+// Naplníme dve polia, jedno číslami od 1 až 50 a to druhé 1 až 10.
+// Z poľa budeme vyberať čísla. Robíme to preto, lebo nahodné generovanie čísel Int.random(in: 1...50), nám môže vygenerovať to isté číslo viackrát v jednom losovaní.
 
+var patdesiat: [Int] = []
+var desat: [Int] = []
+
+for i in 1...50 {
+    
+    patdesiat.append(i)
+    
+    if i <= 10 {
+        desat.append(i)
+    }
+}
+
+// Šesť cyklov, lebo chceme mať 6 losovaní.
 for _ in 1...6 {
 
     var lavaStrana = [Int]()
     var pravaStrana = [Int]()
 
+    // Náhodne rozhádžeme obe polia a zoberieme z nich prvých 5 čísel (z päťdesiatky) a prvé 2 čísla (z desiatky)
     let rozhadzanych50 = patdesiat.shuffled()
     let rozhadzanych10 = desat.shuffled()
 
+    // Vieme to vypísať aj manuálne, ale to by nebolo poriadne programovanie, nižšie máme na toto isté cyklus ;)
     // lavaStrana += [rozhadzanych50[0], rozhadzanych50[1], rozhadzanych50[2], rozhadzanych50[3], rozhadzanych50[4]]
 
+    // Vyberieme prvých 5 čísel z náhodne rozhádzaných 50
     for i in 0...4 {
         lavaStrana.append(rozhadzanych50[i])
     }
 
+    // Ani toto nebudeme vypisovať manuálne, spravíme to tiež cez cyklus
     // pravaStrana += [rozhadzanych10[0], rozhadzanych10[1]]
 
+    // Vyberieme prvé 2 čísla z náhodne rozhádzaných 10
     for j in 0...1 {
         pravaStrana.append(rozhadzanych10[j])
     }
 
-    print(lavaStrana.sorted(), terminator: " ")
-    print(pravaStrana.sorted())
+    print(lavaStrana.sorted(), pravaStrana.sorted())
 }
+
 
 
 // vypíšte prvých 15 čísel z fibonacciho postupnosti
