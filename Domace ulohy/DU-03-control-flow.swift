@@ -8,7 +8,7 @@
 
 let rok = 1954
 
-if rok % 4 == 0 && (rok % 400 == 0 || rok % 100 != 0) {
+if rok.isMultiple(of: 4) && (rok.isMultiple(of: 400) || !rok.isMultiple(of: 100)) {
     print("Rok \(rok) JE priestupný!")
 } else {
     print("Rok \(rok) NIE JE priestupný!")
